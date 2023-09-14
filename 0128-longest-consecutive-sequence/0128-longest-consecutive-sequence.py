@@ -7,6 +7,7 @@ class Solution:
                 length=0
                 while(i+length) in numset:
                     length+=1
-                longest=max(longest,length)
+                if length>longest:
+                    longest = length
         return longest
             
