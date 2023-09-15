@@ -8,8 +8,8 @@ class Solution:
          
             if s[i] not in dict and t[i] not in dict.values():
                 dict[s[i]]=t[i]
-            
-        for i in range(len(s)):
+                
+
             if s[i] in dict and t[i] in dict.values():
                 if dict[s[i]] == t[i]:
                     count+=1
