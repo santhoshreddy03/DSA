@@ -17,12 +17,12 @@ class Solution:
             r -=1
         return True '''
         
-        slow,fast=head,head.next
+        slow,fast=head,head
         while fast and fast.next:
             fast=fast.next.next
             slow=slow.next
-        prev,curr=None,slow.next
-        slow.next=None
+        prev,curr=None,slow
+        slow=None
         while curr:
             temp=curr.next
             curr.next=prev
