@@ -14,8 +14,8 @@ class Solution:
                 stack.append(x)
             elif i=="/":
                 a,b=stack.pop(),stack.pop()
-                x=int(float(b)/a)
-                stack.append(int(x))
+                x=int(b/a)
+                stack.append(x)
             else:
                 stack.append(int(i))
         return stack[0]
