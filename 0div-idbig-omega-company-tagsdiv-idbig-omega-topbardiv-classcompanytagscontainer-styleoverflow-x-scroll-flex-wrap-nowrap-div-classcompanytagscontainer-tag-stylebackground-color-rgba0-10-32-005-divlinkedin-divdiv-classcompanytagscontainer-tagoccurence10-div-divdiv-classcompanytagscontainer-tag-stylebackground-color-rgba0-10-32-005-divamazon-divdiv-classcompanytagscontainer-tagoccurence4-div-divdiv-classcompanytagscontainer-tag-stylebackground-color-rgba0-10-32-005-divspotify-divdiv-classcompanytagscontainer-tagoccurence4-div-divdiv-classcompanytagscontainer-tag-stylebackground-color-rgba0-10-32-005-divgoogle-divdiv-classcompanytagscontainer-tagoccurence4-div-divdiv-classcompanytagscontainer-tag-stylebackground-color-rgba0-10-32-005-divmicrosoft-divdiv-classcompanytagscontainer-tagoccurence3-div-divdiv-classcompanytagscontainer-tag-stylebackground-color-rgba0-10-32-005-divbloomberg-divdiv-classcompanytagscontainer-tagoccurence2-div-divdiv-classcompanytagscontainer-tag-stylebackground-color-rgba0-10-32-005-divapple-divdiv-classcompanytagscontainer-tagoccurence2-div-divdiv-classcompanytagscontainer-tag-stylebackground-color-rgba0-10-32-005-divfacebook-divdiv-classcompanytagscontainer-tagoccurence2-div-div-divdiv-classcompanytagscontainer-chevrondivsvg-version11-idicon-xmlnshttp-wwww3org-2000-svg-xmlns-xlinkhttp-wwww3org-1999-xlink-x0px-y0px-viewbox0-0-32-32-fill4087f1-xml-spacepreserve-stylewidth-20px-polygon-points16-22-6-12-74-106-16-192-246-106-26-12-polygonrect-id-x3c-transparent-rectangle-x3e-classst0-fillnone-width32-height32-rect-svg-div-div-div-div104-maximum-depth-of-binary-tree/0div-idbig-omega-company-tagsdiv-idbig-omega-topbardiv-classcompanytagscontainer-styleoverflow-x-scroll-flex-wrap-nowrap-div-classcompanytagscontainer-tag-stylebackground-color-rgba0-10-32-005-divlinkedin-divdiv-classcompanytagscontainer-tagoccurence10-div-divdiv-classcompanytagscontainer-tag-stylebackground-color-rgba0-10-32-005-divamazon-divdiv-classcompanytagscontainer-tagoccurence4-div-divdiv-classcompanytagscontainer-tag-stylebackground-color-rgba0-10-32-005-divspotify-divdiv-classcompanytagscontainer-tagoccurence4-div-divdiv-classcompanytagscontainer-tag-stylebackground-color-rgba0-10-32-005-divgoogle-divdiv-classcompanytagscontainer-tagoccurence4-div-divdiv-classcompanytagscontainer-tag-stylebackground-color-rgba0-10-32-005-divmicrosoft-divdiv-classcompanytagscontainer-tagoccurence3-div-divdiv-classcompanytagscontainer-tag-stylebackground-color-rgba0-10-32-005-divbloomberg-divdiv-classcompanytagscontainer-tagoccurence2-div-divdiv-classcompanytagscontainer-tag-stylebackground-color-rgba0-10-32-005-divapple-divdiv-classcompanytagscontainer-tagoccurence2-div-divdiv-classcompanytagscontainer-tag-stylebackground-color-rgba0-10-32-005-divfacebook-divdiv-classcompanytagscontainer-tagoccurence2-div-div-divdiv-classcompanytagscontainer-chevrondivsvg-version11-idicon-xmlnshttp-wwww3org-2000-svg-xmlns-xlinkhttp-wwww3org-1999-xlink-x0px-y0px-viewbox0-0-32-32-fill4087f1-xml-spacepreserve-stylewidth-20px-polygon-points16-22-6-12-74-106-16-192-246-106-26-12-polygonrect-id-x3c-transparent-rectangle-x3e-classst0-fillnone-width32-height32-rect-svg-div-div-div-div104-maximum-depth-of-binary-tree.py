@@ -7,13 +7,13 @@
 class Solution:
     
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        ans = 0
-        def rec(root,count):
+        ans=0
+        def maxi(root,count):
             nonlocal ans
             if not root:
-                ans = max(ans, count)
-                return count
-            rec(root.left,count+1)
-            rec(root.right,count+1)
-        rec(root, 0)
+                ans=max(ans,count)
+                return
+            maxi(root.left,count+1)
+            maxi(root.right,count+1)
+        maxi(root,0)
         return ans
