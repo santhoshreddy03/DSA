@@ -22,12 +22,13 @@ class Solution:
                 
             if level:
                 
+                
                 a=0
                 for i in range(len(level)):
                     a+=level[i]
                     
-                    if i==len(level)-1:
-                        a=a/len(level)
-                        lev=a
+                    
+                a=a/len(level)
+                lev=a
                 res.append(lev)
         return res
