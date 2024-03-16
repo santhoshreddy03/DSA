@@ -12,14 +12,21 @@ class Solution:
         while q:
             qlen=len(q)
             level=[]
+            rightside=None
             for i in range(qlen):
                 node=q.popleft()
                 if node:
-                    level.append(node.val)
+                    rightside=node
                     q.append(node.left)
                     q.append(node.right)
-            if level:
+            if rightside:
+                res.append(rightside.val)
+#                 if node:
+#                     level.append(node.val)
+#                     q.append(node.left)
+#                     q.append(node.right)
+#             if level:
     
-                res.append(level[len(level)-1])
+#                 res.append(level[len(level)-1])
         return res
                     
