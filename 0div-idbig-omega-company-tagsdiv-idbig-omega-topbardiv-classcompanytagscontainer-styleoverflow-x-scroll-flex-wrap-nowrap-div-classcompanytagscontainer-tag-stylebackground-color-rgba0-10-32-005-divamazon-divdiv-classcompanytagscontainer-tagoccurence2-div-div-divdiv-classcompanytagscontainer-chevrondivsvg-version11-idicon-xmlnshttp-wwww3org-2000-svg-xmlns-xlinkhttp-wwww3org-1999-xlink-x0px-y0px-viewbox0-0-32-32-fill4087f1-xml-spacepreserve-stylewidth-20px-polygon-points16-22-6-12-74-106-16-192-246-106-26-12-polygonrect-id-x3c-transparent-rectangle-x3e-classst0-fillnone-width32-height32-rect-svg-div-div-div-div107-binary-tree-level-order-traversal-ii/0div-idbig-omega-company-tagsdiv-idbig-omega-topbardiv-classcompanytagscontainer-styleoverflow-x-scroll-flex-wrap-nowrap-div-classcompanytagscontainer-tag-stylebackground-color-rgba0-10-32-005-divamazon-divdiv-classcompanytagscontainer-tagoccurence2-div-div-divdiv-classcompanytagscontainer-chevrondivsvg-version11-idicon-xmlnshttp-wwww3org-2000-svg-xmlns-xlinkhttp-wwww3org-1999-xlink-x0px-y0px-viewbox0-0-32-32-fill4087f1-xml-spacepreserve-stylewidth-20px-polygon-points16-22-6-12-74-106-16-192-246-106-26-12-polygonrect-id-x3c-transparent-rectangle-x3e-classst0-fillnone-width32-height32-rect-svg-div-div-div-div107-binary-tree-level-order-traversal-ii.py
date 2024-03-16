@@ -20,9 +20,9 @@ class Solution:
                     q.append(node.left)
                     q.append(node.right)
             if level:
-                res.append(level)
-        for i in range(len(res)):
-            rev.append(res[len(res)-i-1])
-        return rev
+                res.insert(0,level)
+        # for i in range(len(res)):
+        #     rev.append(res[len(res)-i-1])
+        return res
                 
         
