@@ -13,5 +13,6 @@ class Solution:
             post(root.left)
             post(root.right)
             res.append(root.val)
-            return res
-        return post(root)
+            
+        post(root)
+        return res
