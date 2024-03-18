@@ -11,11 +11,11 @@ class Solution:
             nonlocal nums
             if not root:
                 return
-            nums.append(root.val)
             kk(root.left)
+            nums.append(root.val)
+
             kk(root.right)
             return nums
         kk(root)
-        nums.sort()
 
         return nums[k-1]
