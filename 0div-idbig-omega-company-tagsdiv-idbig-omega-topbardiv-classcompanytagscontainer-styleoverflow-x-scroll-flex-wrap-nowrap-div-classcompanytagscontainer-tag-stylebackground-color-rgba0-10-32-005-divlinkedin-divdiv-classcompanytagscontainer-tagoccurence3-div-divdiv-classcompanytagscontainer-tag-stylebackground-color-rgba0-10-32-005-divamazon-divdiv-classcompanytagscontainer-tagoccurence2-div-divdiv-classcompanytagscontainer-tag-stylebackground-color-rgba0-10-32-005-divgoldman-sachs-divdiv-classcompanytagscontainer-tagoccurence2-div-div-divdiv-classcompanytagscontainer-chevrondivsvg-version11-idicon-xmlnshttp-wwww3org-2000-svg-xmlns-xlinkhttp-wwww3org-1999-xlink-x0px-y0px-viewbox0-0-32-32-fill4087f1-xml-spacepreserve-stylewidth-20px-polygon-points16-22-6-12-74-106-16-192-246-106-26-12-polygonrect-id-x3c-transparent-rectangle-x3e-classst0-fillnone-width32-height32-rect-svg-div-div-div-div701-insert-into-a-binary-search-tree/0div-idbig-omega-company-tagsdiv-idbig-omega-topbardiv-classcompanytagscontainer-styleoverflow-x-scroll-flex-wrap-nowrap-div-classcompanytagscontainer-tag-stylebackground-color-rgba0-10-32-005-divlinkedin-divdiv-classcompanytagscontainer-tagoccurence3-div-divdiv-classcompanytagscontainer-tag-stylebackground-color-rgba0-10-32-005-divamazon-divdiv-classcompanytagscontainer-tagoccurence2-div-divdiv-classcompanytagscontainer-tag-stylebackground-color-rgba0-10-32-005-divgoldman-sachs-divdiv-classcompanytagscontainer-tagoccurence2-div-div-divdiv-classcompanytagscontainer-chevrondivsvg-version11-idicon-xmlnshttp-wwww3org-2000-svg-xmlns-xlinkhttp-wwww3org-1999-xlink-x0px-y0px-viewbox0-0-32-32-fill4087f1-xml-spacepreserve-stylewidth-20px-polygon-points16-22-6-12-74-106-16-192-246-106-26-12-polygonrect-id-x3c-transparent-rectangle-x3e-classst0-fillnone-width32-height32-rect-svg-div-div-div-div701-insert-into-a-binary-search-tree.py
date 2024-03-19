@@ -18,7 +18,6 @@ class Solution:
                 inst(root.left)
             if val>root.val:
                 inst(root.right)
-            return 
         if inst(root):
             return inst(root)
 
