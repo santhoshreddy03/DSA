@@ -10,14 +10,16 @@ class Solution:
         val=0
         def summ(root,val):
             nonlocal count
+            if not root:
+                return 
             if not root.left and not root.right:
                 count+=val*10+root.val
                 return
-            if root.left:
+
                 
-                summ(root.left,val*10+root.val)
-            if root.right:
-                summ(root.right,val*10+root.val)
+            summ(root.left,val*10+root.val)
+
+            summ(root.right,val*10+root.val)
         summ(root,0)
         return count
         
