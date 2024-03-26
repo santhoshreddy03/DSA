@@ -5,7 +5,8 @@ class Solution:
             local,domain=i.split("@")
             local=local.split("+")[0]
             local=local.replace(".","")
-            hashmap.add((local,domain))
+            email=local + "@" + domain
+            hashmap.add(email)
         return len(hashmap)
         
         
