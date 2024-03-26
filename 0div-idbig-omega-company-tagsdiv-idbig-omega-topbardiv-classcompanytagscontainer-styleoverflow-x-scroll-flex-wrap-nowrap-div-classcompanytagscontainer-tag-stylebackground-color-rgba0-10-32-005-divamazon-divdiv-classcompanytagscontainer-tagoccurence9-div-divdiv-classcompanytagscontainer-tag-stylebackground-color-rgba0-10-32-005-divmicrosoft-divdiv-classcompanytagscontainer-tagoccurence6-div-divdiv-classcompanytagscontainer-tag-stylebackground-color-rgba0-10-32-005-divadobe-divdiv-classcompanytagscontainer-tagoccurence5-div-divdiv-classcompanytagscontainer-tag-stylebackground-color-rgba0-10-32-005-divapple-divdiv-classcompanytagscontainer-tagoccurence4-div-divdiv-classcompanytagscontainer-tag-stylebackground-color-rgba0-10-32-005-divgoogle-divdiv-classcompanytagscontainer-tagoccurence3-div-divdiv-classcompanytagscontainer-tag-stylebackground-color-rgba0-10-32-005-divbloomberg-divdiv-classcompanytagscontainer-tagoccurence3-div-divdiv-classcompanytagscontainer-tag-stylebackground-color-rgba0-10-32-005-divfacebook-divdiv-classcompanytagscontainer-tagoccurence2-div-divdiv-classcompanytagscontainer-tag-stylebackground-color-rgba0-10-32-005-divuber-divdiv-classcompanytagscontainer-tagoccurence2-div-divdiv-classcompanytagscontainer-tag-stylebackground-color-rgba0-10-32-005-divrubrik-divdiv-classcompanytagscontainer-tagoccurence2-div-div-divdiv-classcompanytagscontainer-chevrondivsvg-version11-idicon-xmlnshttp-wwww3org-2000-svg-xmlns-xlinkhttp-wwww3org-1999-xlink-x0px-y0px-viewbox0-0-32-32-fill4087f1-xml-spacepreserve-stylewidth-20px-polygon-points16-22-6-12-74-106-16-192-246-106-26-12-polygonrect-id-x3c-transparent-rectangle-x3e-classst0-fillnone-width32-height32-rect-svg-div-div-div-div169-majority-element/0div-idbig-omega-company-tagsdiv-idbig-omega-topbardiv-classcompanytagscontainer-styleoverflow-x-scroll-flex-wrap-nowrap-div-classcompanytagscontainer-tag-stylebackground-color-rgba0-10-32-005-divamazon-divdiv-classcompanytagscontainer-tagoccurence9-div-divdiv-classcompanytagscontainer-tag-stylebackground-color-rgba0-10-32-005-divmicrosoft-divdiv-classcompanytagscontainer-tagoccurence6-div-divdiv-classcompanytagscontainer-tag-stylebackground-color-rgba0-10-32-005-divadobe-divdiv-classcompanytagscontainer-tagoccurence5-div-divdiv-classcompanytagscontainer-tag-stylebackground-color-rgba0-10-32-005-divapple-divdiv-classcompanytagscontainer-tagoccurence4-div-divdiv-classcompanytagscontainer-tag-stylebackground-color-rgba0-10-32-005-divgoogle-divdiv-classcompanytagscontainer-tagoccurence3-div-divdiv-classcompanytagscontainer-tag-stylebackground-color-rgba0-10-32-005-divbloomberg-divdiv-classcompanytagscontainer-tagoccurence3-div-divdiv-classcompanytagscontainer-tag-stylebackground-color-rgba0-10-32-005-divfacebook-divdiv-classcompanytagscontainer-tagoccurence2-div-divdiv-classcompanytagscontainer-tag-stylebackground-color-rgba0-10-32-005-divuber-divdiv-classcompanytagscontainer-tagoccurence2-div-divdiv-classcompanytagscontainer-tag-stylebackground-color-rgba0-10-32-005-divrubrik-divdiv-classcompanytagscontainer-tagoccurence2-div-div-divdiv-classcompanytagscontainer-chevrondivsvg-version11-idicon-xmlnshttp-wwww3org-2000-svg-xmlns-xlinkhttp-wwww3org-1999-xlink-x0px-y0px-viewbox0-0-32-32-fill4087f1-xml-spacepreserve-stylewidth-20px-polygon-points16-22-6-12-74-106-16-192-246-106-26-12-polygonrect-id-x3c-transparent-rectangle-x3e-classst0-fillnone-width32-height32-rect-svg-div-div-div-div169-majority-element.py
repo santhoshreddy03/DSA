@@ -8,7 +8,4 @@ class Solution:
         for i in hmap:
             print(i)
             if hmap[i]>len(nums)//2:
-                res.append(i)
-        print(res)
-        return max(res)
-            
+                return i
