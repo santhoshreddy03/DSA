@@ -10,7 +10,7 @@ class Solution:
                 if spells[i]*potions[m]<success:
                     l=m+1
                 else:
-                    c=min(c,m)
+                    c=m
                     r=m-1
             res.append(len(potions)-c)
             
