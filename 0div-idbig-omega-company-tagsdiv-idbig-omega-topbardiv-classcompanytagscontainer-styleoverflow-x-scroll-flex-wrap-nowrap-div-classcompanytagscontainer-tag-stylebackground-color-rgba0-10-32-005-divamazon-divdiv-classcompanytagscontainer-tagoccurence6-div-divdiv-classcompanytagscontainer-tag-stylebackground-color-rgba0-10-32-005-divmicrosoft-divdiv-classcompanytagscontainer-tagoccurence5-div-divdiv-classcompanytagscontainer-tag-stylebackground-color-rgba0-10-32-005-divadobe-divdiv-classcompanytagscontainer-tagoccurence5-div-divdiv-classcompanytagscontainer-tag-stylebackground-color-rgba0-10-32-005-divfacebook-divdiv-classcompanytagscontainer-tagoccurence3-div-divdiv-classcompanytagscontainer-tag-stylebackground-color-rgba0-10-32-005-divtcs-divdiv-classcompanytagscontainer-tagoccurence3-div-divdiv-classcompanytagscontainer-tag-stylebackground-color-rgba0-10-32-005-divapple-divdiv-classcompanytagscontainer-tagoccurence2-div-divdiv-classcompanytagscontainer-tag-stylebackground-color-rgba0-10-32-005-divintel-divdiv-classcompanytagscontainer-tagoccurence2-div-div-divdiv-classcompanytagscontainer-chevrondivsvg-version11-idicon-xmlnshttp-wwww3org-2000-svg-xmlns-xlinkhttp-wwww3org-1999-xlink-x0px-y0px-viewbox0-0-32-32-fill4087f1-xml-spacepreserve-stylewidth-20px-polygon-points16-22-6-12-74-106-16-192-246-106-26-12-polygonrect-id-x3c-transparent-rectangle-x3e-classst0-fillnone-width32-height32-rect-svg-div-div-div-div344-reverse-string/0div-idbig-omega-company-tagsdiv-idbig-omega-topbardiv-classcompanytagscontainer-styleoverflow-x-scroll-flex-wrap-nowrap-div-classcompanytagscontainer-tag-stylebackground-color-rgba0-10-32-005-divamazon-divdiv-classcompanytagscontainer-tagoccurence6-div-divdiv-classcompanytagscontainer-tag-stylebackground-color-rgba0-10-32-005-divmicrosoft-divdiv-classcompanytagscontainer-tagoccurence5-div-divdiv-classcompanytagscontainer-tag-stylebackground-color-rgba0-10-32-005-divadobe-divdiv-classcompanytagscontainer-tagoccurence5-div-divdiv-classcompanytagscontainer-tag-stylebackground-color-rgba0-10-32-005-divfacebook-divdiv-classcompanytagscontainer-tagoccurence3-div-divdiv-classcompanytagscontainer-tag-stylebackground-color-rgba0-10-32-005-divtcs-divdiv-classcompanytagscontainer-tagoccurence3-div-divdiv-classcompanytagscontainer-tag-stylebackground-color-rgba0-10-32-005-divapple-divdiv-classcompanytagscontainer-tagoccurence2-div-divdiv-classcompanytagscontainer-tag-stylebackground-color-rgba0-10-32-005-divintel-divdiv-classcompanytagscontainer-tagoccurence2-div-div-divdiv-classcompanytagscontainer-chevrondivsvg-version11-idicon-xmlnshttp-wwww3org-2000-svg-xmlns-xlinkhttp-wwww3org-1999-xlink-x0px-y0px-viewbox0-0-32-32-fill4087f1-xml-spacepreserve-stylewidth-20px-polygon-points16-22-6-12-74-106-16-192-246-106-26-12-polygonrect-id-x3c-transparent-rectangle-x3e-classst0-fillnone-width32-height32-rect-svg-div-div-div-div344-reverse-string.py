@@ -3,13 +3,8 @@ class Solution:
         """
         Do not return anything, modify s in-place instead.
         """
-        def sw(i):
-            if i==len(s)//2:
-                return
-
-            temp=s[i]
-            s[i]=s[len(s)-1-i]
-            s[len(s)-1-i]=temp
-            sw(i+1)
-        sw(0)
-        
+        j=-1
+        for i in range(len(s)//2):
+            s[i],s[j]=s[j],s[i]
+            j-=1
+            
