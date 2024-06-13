@@ -15,8 +15,8 @@ class Solution:
                         res=[nums[i],nums[j],nums[l],nums[r]]
                         if res not in out:
                             out.append(res)
-                            l+=1
-                            r-=1
+                        l+=1
+                        r-=1
                         while l<r and nums[r]==nums[r+1]:
                             r-=1
                         while l<r and nums[l]==nums[l-1]:
