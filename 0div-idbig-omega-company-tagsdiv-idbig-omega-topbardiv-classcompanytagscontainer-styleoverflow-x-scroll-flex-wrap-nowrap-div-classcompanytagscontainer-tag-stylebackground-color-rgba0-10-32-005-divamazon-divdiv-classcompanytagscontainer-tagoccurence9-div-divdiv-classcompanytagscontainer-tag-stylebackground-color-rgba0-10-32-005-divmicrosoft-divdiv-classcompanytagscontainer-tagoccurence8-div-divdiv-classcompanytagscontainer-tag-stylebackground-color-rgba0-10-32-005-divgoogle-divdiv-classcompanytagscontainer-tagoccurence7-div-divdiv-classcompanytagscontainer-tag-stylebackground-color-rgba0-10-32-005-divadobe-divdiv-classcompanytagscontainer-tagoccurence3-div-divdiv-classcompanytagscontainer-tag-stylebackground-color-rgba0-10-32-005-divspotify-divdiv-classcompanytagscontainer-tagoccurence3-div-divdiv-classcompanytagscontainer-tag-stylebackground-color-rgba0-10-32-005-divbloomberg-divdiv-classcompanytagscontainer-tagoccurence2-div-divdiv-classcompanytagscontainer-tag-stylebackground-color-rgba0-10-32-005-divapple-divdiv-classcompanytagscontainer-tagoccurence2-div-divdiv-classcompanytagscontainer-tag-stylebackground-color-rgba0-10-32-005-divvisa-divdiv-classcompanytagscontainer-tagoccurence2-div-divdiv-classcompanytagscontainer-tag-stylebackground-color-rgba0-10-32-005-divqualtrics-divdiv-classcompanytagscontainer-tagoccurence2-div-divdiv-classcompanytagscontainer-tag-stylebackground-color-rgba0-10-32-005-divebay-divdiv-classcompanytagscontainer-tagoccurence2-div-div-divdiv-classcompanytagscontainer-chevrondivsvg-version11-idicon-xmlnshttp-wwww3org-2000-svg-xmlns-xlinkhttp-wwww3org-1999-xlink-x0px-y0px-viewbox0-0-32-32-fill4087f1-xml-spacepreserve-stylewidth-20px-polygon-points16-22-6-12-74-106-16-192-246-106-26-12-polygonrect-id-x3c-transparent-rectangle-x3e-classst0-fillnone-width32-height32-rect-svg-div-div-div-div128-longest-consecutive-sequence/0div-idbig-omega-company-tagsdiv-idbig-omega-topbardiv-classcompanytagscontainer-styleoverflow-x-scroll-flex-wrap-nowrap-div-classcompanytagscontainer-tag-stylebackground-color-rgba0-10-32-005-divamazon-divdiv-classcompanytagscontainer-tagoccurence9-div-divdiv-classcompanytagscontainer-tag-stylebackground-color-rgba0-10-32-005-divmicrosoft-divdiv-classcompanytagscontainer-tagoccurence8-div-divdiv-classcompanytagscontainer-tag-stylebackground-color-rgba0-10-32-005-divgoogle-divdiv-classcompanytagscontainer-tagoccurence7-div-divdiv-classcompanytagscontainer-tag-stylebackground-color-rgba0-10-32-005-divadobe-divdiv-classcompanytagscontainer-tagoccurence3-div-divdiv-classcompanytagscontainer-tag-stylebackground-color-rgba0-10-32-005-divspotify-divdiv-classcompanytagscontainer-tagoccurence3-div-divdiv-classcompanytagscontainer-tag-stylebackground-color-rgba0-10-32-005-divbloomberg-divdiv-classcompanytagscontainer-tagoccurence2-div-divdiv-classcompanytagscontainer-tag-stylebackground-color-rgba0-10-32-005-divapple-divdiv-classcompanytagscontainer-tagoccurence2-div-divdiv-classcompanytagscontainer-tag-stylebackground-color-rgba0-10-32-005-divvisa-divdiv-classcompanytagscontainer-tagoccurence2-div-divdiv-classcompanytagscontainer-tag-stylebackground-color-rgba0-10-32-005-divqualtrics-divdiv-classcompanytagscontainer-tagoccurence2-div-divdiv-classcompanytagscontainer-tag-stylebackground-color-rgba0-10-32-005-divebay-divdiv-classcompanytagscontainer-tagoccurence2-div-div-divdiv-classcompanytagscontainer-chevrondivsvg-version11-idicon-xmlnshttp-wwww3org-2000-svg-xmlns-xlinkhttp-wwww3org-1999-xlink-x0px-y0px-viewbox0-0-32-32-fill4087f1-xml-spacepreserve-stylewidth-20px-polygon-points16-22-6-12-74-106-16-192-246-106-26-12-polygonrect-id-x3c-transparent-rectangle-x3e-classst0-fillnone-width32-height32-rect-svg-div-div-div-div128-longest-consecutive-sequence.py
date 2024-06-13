@@ -15,24 +15,7 @@ class Solution:
 #         return res
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+               
         
         
         nums.sort()
