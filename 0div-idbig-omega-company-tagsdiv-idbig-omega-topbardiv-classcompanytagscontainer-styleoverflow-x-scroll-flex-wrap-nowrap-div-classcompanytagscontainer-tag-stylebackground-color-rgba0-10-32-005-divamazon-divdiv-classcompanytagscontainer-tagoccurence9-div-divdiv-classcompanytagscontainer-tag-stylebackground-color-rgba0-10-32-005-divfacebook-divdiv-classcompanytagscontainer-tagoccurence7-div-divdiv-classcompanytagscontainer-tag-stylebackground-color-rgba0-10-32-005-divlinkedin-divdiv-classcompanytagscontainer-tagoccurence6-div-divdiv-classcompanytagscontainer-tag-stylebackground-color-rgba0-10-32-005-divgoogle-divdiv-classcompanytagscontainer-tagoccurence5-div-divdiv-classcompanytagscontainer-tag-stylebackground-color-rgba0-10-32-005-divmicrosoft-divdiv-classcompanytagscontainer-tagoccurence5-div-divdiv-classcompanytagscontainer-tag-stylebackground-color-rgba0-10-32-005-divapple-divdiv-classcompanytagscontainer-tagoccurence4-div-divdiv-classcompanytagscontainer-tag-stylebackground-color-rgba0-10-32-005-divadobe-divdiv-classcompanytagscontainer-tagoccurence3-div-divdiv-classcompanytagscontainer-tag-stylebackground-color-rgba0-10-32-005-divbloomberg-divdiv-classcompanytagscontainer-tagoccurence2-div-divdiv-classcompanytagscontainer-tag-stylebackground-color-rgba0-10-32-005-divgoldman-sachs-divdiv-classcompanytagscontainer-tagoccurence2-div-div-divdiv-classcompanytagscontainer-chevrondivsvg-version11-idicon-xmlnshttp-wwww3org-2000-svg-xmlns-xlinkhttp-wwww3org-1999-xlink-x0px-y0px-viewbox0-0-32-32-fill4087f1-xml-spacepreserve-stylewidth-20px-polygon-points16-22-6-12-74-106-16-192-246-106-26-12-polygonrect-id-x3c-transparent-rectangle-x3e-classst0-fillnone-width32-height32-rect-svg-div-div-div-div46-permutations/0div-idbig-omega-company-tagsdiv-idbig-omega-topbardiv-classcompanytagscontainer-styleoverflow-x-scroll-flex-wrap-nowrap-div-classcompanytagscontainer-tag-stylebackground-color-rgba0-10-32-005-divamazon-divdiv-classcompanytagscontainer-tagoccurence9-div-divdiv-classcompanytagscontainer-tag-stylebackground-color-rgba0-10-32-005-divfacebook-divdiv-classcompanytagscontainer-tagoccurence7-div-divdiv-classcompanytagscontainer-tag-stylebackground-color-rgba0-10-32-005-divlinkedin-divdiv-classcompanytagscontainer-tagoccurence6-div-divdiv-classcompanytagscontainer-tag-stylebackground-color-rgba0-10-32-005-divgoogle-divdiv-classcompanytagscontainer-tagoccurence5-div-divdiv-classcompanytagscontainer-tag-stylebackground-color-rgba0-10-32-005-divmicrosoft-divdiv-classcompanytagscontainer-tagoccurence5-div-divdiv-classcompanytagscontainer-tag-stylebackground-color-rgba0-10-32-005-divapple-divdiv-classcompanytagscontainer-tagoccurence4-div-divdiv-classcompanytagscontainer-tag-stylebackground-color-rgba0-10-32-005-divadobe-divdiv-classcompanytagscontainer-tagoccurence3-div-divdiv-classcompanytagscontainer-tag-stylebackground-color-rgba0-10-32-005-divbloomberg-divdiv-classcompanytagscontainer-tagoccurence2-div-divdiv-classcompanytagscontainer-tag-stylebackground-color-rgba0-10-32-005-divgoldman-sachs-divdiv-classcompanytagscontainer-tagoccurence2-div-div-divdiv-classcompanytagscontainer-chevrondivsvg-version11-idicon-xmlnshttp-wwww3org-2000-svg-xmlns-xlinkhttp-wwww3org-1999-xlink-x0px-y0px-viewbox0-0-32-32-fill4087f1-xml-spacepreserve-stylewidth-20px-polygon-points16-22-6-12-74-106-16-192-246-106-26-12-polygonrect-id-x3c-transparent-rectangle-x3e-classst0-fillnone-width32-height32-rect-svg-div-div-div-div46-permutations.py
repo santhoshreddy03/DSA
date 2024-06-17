@@ -1,18 +1,14 @@
 class Solution:
     def permute(self, nums: List[int]) -> List[List[int]]:
-        def recur(nums,freq,ds):
-            if len(ds)==len(nums):
-                self.ans.append(ds.copy())
-                return 
-            for i in range(len(nums)):
-                if not freq[i]:
-                    ds.append(nums[i])
-                    freq[i]=1
-                    recur(nums,freq,ds)
-                    freq[i]=0
-                    ds.pop()
-        self.ans=[]
-        ds=[]
-        freq=[0]*len(nums)
-        recur(nums,freq,ds)
-        return self.ans
+        def recur(index,nums,ans):
+            if index==len(nums):
+                ans.append(nums.copy())
+                return
+            for i in range(index,len(nums)):
+                nums[index],nums[i]=nums[i],nums[index]
+                recur(index+1,nums,ans)
+                nums[index],nums[i]=nums[i],nums[index]
+        ans=[]
+        recur(0,nums,ans)
+        return ans
+                
