@@ -14,8 +14,7 @@ class Solution:
             return 0
         if i<len(s) and s[i]=="+":
             i+=1
-        checker=set("0123456789")
-        while i<len(s) and s[i] in checker:
+        while i<len(s) and s[i].isnumeric():
             res=res*10+int(s[i])
             i+=1
         res=res*negative
