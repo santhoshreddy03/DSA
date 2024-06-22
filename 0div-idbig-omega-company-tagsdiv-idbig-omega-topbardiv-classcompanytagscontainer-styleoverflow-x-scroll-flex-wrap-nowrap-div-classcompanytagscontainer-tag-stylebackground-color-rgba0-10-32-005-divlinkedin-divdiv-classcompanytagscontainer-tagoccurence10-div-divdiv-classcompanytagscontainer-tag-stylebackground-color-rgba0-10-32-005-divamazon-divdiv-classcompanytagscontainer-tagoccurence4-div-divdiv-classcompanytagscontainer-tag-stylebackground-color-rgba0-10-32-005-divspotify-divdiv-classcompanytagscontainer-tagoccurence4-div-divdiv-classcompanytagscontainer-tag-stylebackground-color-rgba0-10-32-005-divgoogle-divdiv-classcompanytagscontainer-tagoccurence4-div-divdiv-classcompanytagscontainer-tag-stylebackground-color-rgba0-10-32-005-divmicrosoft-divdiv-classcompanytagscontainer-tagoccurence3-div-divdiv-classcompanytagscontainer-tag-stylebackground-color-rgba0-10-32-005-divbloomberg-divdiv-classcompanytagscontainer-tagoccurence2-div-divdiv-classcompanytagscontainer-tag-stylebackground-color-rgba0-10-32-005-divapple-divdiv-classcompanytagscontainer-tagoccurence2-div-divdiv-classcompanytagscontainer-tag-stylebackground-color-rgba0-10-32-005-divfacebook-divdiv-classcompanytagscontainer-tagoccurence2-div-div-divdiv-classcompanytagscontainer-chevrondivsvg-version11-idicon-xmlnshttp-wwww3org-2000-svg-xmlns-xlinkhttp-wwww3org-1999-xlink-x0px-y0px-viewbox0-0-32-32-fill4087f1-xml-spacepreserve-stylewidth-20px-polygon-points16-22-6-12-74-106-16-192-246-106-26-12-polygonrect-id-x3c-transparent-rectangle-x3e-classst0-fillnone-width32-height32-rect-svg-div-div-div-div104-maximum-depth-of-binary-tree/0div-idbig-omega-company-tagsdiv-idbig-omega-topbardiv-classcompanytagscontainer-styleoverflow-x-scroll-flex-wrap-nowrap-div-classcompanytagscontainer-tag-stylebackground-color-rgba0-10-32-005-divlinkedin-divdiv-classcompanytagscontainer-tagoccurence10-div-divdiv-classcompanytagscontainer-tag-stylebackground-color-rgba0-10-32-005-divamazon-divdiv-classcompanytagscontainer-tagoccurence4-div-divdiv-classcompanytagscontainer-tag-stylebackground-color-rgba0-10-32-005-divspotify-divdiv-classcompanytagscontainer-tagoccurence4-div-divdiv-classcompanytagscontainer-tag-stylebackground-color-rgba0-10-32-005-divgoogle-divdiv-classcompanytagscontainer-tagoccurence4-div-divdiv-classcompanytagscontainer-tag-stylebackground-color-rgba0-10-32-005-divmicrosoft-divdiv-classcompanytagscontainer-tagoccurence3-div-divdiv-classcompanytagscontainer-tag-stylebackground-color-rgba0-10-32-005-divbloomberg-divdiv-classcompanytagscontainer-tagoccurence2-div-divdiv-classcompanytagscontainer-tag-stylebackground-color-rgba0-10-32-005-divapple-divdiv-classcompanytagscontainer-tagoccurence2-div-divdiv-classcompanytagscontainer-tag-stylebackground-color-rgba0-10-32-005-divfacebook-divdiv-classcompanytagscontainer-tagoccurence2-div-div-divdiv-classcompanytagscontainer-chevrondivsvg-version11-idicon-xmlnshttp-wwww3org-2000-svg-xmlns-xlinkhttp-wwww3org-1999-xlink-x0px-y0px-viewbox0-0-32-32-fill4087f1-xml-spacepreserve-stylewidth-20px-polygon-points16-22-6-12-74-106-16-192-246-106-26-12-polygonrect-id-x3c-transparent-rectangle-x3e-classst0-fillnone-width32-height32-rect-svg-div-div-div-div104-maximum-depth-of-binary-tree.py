@@ -15,7 +15,7 @@ class Solution:
                 return 
             count(root.left,cnt+1)
             count(root.right,cnt+1)
-            return ans
+
         count(root,0)
         return ans
         
