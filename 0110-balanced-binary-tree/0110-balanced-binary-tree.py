@@ -13,11 +13,12 @@ class Solution:
         if not root:
             return 0
         left=self.height(root.left)
-        right=self.height(root.right)
-
-
-        if left==-1 or right==-1:
+        if left==-1:
             return -1
+        right=self.height(root.right)
+        if right==-1:
+            return -1
+
         if abs(left-right)>1:
             return -1
 
