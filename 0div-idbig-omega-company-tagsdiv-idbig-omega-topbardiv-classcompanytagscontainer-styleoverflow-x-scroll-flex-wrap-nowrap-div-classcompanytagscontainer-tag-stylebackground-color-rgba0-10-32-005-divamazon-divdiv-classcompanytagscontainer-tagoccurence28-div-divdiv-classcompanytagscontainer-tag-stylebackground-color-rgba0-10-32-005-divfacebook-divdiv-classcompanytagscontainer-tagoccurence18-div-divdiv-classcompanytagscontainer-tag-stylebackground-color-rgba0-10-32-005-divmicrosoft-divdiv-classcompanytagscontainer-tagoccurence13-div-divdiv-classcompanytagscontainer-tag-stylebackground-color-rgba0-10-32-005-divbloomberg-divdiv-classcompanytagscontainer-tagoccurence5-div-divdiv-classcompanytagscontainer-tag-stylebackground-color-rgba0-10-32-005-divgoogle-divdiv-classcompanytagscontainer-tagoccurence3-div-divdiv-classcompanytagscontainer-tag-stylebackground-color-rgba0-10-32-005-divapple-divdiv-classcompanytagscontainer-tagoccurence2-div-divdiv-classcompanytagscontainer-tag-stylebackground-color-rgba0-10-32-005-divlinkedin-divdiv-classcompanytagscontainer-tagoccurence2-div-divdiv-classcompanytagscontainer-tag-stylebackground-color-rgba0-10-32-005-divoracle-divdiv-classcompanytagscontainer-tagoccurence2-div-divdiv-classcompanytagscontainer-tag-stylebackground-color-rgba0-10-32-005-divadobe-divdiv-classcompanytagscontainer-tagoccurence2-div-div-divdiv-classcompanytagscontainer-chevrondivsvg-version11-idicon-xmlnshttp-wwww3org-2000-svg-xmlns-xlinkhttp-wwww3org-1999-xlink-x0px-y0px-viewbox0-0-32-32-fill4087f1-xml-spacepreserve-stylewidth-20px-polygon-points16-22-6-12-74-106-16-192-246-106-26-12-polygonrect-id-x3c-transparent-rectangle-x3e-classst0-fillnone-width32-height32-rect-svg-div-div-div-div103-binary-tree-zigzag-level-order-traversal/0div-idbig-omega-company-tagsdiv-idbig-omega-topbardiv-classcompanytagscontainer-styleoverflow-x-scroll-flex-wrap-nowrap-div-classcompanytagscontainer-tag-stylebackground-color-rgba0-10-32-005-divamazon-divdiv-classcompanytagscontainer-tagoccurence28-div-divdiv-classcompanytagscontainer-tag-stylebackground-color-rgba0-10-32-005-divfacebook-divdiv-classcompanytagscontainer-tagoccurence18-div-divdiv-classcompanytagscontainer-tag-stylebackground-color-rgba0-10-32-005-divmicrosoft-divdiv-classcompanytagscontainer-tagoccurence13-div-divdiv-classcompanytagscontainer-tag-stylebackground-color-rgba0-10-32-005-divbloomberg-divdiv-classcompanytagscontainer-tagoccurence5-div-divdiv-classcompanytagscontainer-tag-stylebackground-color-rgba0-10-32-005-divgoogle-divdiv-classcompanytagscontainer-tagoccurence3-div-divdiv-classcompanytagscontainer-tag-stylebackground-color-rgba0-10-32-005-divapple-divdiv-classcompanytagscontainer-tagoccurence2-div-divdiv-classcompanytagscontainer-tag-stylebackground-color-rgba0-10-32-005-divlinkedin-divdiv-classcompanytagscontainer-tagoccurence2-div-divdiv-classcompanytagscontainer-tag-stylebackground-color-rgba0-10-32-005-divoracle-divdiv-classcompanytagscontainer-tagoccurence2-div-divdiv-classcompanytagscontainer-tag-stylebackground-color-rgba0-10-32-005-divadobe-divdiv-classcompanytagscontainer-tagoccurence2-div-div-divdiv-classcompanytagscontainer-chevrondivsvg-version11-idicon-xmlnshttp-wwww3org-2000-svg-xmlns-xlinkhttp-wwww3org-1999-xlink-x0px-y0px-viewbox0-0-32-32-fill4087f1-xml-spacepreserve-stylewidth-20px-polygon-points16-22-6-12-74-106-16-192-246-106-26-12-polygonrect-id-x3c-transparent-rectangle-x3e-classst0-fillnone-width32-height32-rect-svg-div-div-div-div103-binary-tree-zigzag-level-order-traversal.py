@@ -22,7 +22,6 @@ class Solution:
                 if node.right:
                     q.append(node.right)
             if flag==1:
-                print('as')
                 ans.append(level[::-1])
                 flag=0
             elif flag==0:
