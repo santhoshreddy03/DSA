@@ -21,8 +21,7 @@ class Solution:
             return left
         elif right:
             return right
-        return None
-    
+
         
         
             
