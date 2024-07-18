@@ -12,7 +12,6 @@ class Solution:
                 return 0
             visit.add((r,c))
             count+=1
-            print(count)
             directions=[[0,1],[0,-1],[1,0],[-1,0]]
             for dr,dc in directions:
                 dfs(r+dr,c+dc)
